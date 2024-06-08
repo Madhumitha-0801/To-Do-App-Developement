@@ -1,0 +1,158 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background: linear-gradient(to top, #6DD5FA, #FF758C);*/
+    background: linear-gradient(to right, #fbc2eb , #a6c1ee);
+    color: #333;
+}
+
+.todo-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#add-task-button {
+    padding: 10px 20px;
+    background: #ff6347;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#priority-select {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    -webkit-appearance: none; /* Remove default styling for webkit browsers */
+    -moz-appearance: none; /* Remove default styling for Mozilla browsers */
+    appearance: none; /* Remove default styling for other browsers */
+    cursor: pointer;
+}
+
+#priority-select:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+}
+
+/* Optional: Add a down arrow icon */
+#priority-select::-ms-expand {
+    display: none; /* Remove the default dropdown arrow in IE */
+}
+
+#priority-select::after {
+    content: '\f0dc'; /* Unicode for Font Awesome down arrow */
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+    pointer-events: none;
+    color: #a79b9b;
+}
+/* Style the placeholder option */
+#priority-select option[disabled][hidden] {
+    display: none; /* Hide the placeholder option */
+}
+
+#priority-select option[value=""] {
+    color: #999; /* Placeholder text color */
+}
+
+.task-item.low {
+    border-left: 5px solid green;
+}
+
+.task-item.medium {
+    border-left: 5px solid orange;
+}
+
+.task-item.high {
+    border-left: 5px solid red;
+}
+
+
+#add-task-button:hover {
+    background: #e55337;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.task-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: #333;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Completed Task Icon */
+.toggle-status .fa-solid-check-circle {
+    color: #2ad728; /* Green color for completed tasks */
+}
+
+/* Pending Task Icon */
+.toggle-status .fa-circle {
+    color: #76818a; /* Gray color for pending tasks */
+}
+.task-actions button.edit {
+    color: rgb(0, 157, 255);
+}
+
+.task-actions button.delete {
+    color: #f00;
+}
